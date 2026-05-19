@@ -36,24 +36,24 @@ export default function Navbar() {
         borderBottom: scrolled ? '1px solid rgba(212,175,55,0.3)' : 'none',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 md:h-20">
           {/* Logo */}
-          <button onClick={() => handleNav('#home')} className="flex items-center gap-3 group">
+          <button onClick={() => handleNav('#home')} className="flex items-center gap-2 md:gap-3 group flex-shrink-0">
             <img
               src="/cake_logo.png"
               alt="Shri Devi Cake Palace"
-              className="h-12 md:h-14 w-auto object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
+              className="h-10 md:h-14 w-auto object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
             />
           </button>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {links.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNav(link.href)}
-                className="text-sm font-semibold tracking-widest uppercase transition-all duration-300 hover:scale-105"
+                className="text-xs lg:text-sm font-semibold tracking-widest uppercase transition-all duration-300 hover:scale-105"
                 style={{ color: '#D4AF37', letterSpacing: '0.12em' }}
                 onMouseEnter={(e) => {
                   (e.target as HTMLElement).style.color = '#FFD700';
@@ -71,7 +71,7 @@ export default function Navbar() {
               href="https://wa.me/919740449324?text=I%20need%20to%20order%20cake"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 rounded-full text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="px-4 md:px-5 py-2 rounded-full text-xs lg:text-sm font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105 hover:shadow-lg"
               style={{
                 background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
                 color: '#8B0000',
@@ -84,12 +84,12 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 rounded-lg transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg transition-colors duration-200 flex-shrink-0"
             style={{ color: '#D4AF37' }}
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
-            {open ? <X size={26} /> : <Menu size={26} />}
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -98,17 +98,17 @@ export default function Navbar() {
       <div
         className="md:hidden overflow-hidden transition-all duration-300"
         style={{
-          maxHeight: open ? '400px' : '0',
+          maxHeight: open ? '320px' : '0',
           background: 'rgba(139,0,0,0.98)',
           borderTop: open ? '1px solid rgba(212,175,55,0.2)' : 'none',
         }}
       >
-        <div className="px-6 py-4 flex flex-col gap-4">
+        <div className="px-4 sm:px-6 py-4 flex flex-col gap-3">
           {links.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="text-left text-base font-semibold tracking-widest uppercase py-2 border-b transition-all duration-200"
+              className="text-left text-sm font-semibold tracking-widest uppercase py-2 border-b transition-all duration-200"
               style={{
                 color: '#D4AF37',
                 borderColor: 'rgba(212,175,55,0.15)',
@@ -121,7 +121,7 @@ export default function Navbar() {
             href="https://wa.me/919740449324?text=I%20need%20to%20order%20cake"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 px-5 py-3 rounded-full text-sm font-bold tracking-wider uppercase text-center"
+            className="mt-2 px-5 py-3 rounded-full text-xs font-bold tracking-wider uppercase text-center"
             style={{
               background: 'linear-gradient(135deg, #D4AF37, #FFD700)',
               color: '#8B0000',

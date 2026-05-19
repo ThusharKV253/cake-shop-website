@@ -77,12 +77,17 @@ function CakeCard({ cake, index }: { cake: (typeof cakes)[0]; index: number }) {
       </div>
 
       {/* Image container */}
-      <div className="relative overflow-hidden" style={{ height: '220px' }}>
+      <div className="relative overflow-hidden" style={{ height: '240px', background: '#f9f9f9' }}>
         <img
           src={cake.image}
           alt={cake.name}
-          className="w-full h-full object-cover transition-transform duration-500"
-          style={{ transform: hovered ? 'scale(1.08)' : 'scale(1)' }}
+          className="w-full h-full transition-transform duration-500"
+          style={{
+            objectFit: 'contain',
+            objectPosition: 'center',
+            padding: '8px',
+            transform: hovered ? 'scale(1.05)' : 'scale(1)',
+          }}
           loading="lazy"
         />
         {/* Image overlay on hover */}
@@ -96,9 +101,9 @@ function CakeCard({ cake, index }: { cake: (typeof cakes)[0]; index: number }) {
       </div>
 
       {/* Card body */}
-      <div className="p-5">
+      <div className="p-4 md:p-5 flex flex-col gap-3">
         <h3
-          className="text-base font-bold mb-3 text-center"
+          className="text-sm md:text-base font-bold text-center flex-1 line-clamp-2"
           style={{ color: '#8B0000', fontFamily: 'Georgia, serif' }}
         >
           {cake.name}
@@ -108,7 +113,7 @@ function CakeCard({ cake, index }: { cake: (typeof cakes)[0]; index: number }) {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm tracking-wider uppercase transition-all duration-300"
+          className="flex items-center justify-center gap-2 w-full py-2.5 md:py-3 rounded-lg md:rounded-xl font-bold text-xs md:text-sm tracking-wider uppercase transition-all duration-300"
           style={{
             background: hovered
               ? 'linear-gradient(135deg, #8B0000, #c41414)'
@@ -190,7 +195,7 @@ export default function Menu() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
           {cakes.map((cake, i) => (
             <CakeCard key={cake.name} cake={cake} index={i} />
           ))}

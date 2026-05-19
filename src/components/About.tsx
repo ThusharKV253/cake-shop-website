@@ -65,11 +65,11 @@ export default function About() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
           {/* Left: Image */}
-          <div ref={leftRef} className="relative">
+          <div ref={leftRef} className="relative flex justify-center">
             <div
-              className="rounded-2xl overflow-hidden"
+              className="rounded-2xl overflow-hidden w-full max-w-sm"
               style={{
                 boxShadow: '0 8px 40px rgba(0,0,0,0.4)',
                 border: '2px solid rgba(212,175,55,0.3)',
@@ -78,7 +78,7 @@ export default function About() {
               <img
                 src="/cake_logo.png"
                 alt="Shri Devi Cake Palace"
-                className="w-full h-64 md:h-80 object-contain"
+                className="w-full h-56 md:h-72 object-contain"
                 style={{ background: 'rgba(255,253,208,0.05)' }}
               />
             </div>
@@ -109,32 +109,33 @@ export default function About() {
           {/* Right: Text */}
           <div ref={rightRef}>
             <p
-              className="text-sm font-bold tracking-widest uppercase mb-3"
+              className="text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-3"
               style={{ color: '#D4AF37' }}
             >
               About Us
             </p>
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 leading-tight"
+              className="text-2xl md:text-4xl lg:text-5xl font-bold mb-1 md:mb-2 leading-tight"
               style={{ color: '#FFFDD0', fontFamily: 'Georgia, serif' }}
             >
               Shri Devi
             </h2>
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+              className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight"
               style={{ color: '#D4AF37', fontFamily: 'Georgia, serif' }}
             >
               Cake Palace
             </h2>
 
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4 md:mb-6">
               <div className="h-px flex-1" style={{ background: 'rgba(212,175,55,0.3)' }} />
-              <Heart size={16} style={{ color: '#FF69B4' }} />
+              <Heart size={14} className="md:block hidden" style={{ color: '#FF69B4' }} />
+              <Heart size={12} className="md:hidden" style={{ color: '#FF69B4' }} />
               <div className="h-px flex-1" style={{ background: 'rgba(212,175,55,0.3)' }} />
             </div>
 
             <p
-              className="text-base md:text-lg leading-relaxed mb-8"
+              className="text-sm md:text-base lg:text-lg leading-relaxed mb-6 md:mb-8"
               style={{ color: 'rgba(255,253,208,0.85)', lineHeight: '1.8' }}
             >
               Shri Devi Cake Palace prepares fresh homemade cakes with love for birthdays, weddings
@@ -142,34 +143,36 @@ export default function About() {
               items with home delivery service.
             </p>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
+            <div className="space-y-3 md:space-y-4">
+              <div className="flex items-start gap-3 md:gap-4">
                 <div
-                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mt-0.5"
+                  className="flex-shrink-0 w-9 md:w-10 h-9 md:h-10 rounded-full flex items-center justify-center mt-0.5"
                   style={{ background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.3)' }}
                 >
-                  <MapPin size={16} style={{ color: '#D4AF37' }} />
+                  <MapPin size={14} className="md:block hidden" style={{ color: '#D4AF37' }} />
+                  <MapPin size={12} className="md:hidden" style={{ color: '#D4AF37' }} />
                 </div>
                 <div>
-                  <p className="font-semibold mb-0.5" style={{ color: '#D4AF37' }}>Our Location</p>
-                  <p className="text-sm" style={{ color: 'rgba(255,253,208,0.75)' }}>
+                  <p className="text-sm md:text-base font-semibold mb-0.5" style={{ color: '#D4AF37' }}>Our Location</p>
+                  <p className="text-xs md:text-sm" style={{ color: 'rgba(255,253,208,0.75)' }}>
                     Lakshmishreesha Nivasa, Kuvenja, Bettampady Post, Puttur Taluk
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-start gap-3 md:gap-4">
                 <div
-                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
+                  className="flex-shrink-0 w-9 md:w-10 h-9 md:h-10 rounded-full flex items-center justify-center mt-0.5"
                   style={{ background: 'rgba(212,175,55,0.15)', border: '1px solid rgba(212,175,55,0.3)' }}
                 >
-                  <Phone size={16} style={{ color: '#D4AF37' }} />
+                  <Phone size={14} className="md:block hidden" style={{ color: '#D4AF37' }} />
+                  <Phone size={12} className="md:hidden" style={{ color: '#D4AF37' }} />
                 </div>
                 <div>
-                  <p className="font-semibold mb-0.5" style={{ color: '#D4AF37' }}>Call Us</p>
+                  <p className="text-sm md:text-base font-semibold mb-0.5" style={{ color: '#D4AF37' }}>Call Us</p>
                   <a
                     href="tel:9740449324"
-                    className="text-sm transition-colors duration-200 hover:underline"
+                    className="text-xs md:text-sm transition-colors duration-200 hover:underline"
                     style={{ color: 'rgba(255,253,208,0.85)' }}
                   >
                     +91 97404 49324

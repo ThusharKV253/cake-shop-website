@@ -84,7 +84,7 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {features.map((feature, i) => {
             const Icon = feature.icon;
             return (
@@ -92,7 +92,7 @@ export default function Features() {
                 key={feature.title}
                 ref={(el) => { cardsRef.current[i] = el; }}
                 data-delay={String(i * 120)}
-                className="group relative text-center p-8 rounded-2xl cursor-default transition-all duration-400"
+                className="group relative text-center p-5 md:p-8 rounded-2xl cursor-default transition-all duration-400"
                 style={{
                   background: '#fff',
                   boxShadow: '0 4px 20px rgba(139,0,0,0.07)',
@@ -113,22 +113,23 @@ export default function Features() {
               >
                 {/* Icon container */}
                 <div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-5 mx-auto"
+                  className="inline-flex items-center justify-center w-14 md:w-16 h-14 md:h-16 rounded-full mb-3 md:mb-5 mx-auto"
                   style={{
                     background: 'linear-gradient(135deg, rgba(139,0,0,0.08), rgba(212,175,55,0.12))',
                     border: '1.5px solid rgba(212,175,55,0.3)',
                   }}
                 >
-                  <Icon size={28} strokeWidth={1.5} style={{ color: '#8B0000' }} />
+                  <Icon size={24} className="md:block hidden" strokeWidth={1.5} style={{ color: '#8B0000' }} />
+                  <Icon size={20} className="md:hidden" strokeWidth={1.5} style={{ color: '#8B0000' }} />
                 </div>
 
                 <h3
-                  className="text-lg font-bold mb-3"
+                  className="text-base md:text-lg font-bold mb-2 md:mb-3"
                   style={{ color: '#8B0000', fontFamily: 'Georgia, serif' }}
                 >
                   {feature.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#6b4c4c' }}>
+                <p className="text-xs md:text-sm leading-relaxed" style={{ color: '#6b4c4c' }}>
                   {feature.description}
                 </p>
 

@@ -72,9 +72,9 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-start">
           {/* Left: Contact info */}
-          <div ref={leftRef} className="space-y-6">
+          <div ref={leftRef} className="space-y-4 md:space-y-6">
             {/* Phone card */}
             <div
               className="p-6 rounded-2xl"
