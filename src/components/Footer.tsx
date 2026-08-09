@@ -2,6 +2,7 @@ const links = [
   { label: 'Home', href: '#home' },
   { label: 'About Us', href: '#about' },
   { label: 'Menu', href: '#menu' },
+  { label: 'Sri Devi Canteen', href: '#canteen' },
   { label: 'Contact Us', href: '#contact' },
 ];
 
